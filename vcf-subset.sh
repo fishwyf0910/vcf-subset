@@ -12,4 +12,4 @@ bgzip 2pop.vcf && tabix -p vcf 2pop.vcf.gz
 vcftools --gzvcf 2pop.vcf.gz --positions specific_position.txt --recode --out specific_position.vcf
 
 #### 提部分染色体
-vcftools --gzvcf input.vcf --chr n --recode – recode-INFO-all --stdout | bgzip > output.vcf.gz
+vcftools --gzvcf test.vcf.gz --chr $n --recode --recode-INFO-all --stdout | gzip -c > $n.vcf.gz
