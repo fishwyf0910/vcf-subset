@@ -2,6 +2,7 @@ source activate vcftools
 
 #### 提部分样本
 bcftools view -s 02R0004,03R0016,02R0010 test.vcf.gz -Ov  > 2pop.vcf
+bcftools view -S list test.vcf.gz -Ov  > 2pop.vcf
 bgzip 2pop.vcf && tabix -p vcf 2pop.vcf.gz
 
 #### 提部分snp位点
